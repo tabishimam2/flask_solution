@@ -154,7 +154,7 @@ def plot():
                 X.remove(temp[ele])
                 Y.pop(extra)
             if set(X) == set(Y) and   len(X) >= 4 and len(Y) >= 4:
-                server_response = {"status": "success 1 ({},{}) ({},{}) ({},{}) ({},{})"}
+                server_response = {"status": "success  ({},{}) ({},{}) ({},{}) ({},{})".format(X[0], Y[0], X[1], Y[1], X[2], Y[2], X[3], Y[3])}
                 return jsonify(server_response)
             
 
@@ -165,7 +165,7 @@ def plot():
                 Y.remove(temp[ele])
                 X.pop(extra)
                 if set(X) == set(Y)  and len(X) >= 4 and len(Y) >= 4:
-                    server_response = {"status": "success 2 ({},{}) ({},{}) ({},{}) ({},{})"}
+                    server_response = {"status": "success  ({},{}) ({},{}) ({},{}) ({},{})".format(X[0], Y[0], X[1], Y[1], X[2], Y[2], X[3], Y[3])}
                     return jsonify(server_response)  
                         
     server_response = {"status":"input accepted"}
